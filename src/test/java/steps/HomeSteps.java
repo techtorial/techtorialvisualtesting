@@ -6,6 +6,7 @@ import io.cucumber.java.en.Given;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import utils.ConfigReader;
 
 public class HomeSteps {
 
@@ -20,7 +21,7 @@ public class HomeSteps {
     public void the_user_navigate_to_techtorial() {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
-        driver.get("https://www.techtorialacademy.com/about-us");
+        driver.get(ConfigReader.getProperty("url"));
     }
 
 }
